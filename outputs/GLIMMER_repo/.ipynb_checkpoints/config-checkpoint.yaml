@@ -1,0 +1,38 @@
+## config.yaml
+training:
+  few_shot_primera:
+    learning_rate: 3e-5
+    epochs:
+      "10_examples": 200
+      "100_examples": 100
+    validation_interval: 5
+
+glimmer:
+  similar_word_threshold: 0.65
+  sentence_similarity_threshold: 0.98
+  sigma: 0.05
+  beta: 4
+  min_summary_length: 6
+  output_length:
+    multi_news: 256
+    multi_xscience: 128
+    duc_2004: 128
+  truncation:
+    multi_news: 500
+    duc_2004: 500
+
+clustering:
+  fixed_cluster_number:
+    multi_news: 9
+    multi_xscience: 7
+    duc_2004: 5
+
+dataset:
+  name: "Multi-News"  # Options: Multi-News, Multi-XScience, DUC-2004
+
+hardware:
+  use_gpu: false
+  cpu: "Intel Core i7-6700"
+
+logging:
+  level: "INFO"
